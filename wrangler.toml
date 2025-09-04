@@ -1,0 +1,11 @@
+name = "bwdecoded"
+account_id = "ef6b3562dc3885c08fa33141b5a1b948"          # Dashboard → Workers → Overview
+compatibility_date = "2025-09-04"
+
+# Worker entry point
+main = "src/workers.ts"
+
+# Tell Wrangler where your built Vite files will be
+[assets]
+directory = "dist"
+binding = "ASSETS"                         # exposes env.ASSETS.fetch(...)
