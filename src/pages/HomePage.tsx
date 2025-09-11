@@ -1,7 +1,6 @@
 import React from 'react';
 import { Play, ArrowRight, Mic, Users, Target, Zap, Brain, Radio, ChevronRight, Activity, Clock, Calendar, MoreHorizontal, X, Lightbulb, ExternalLink } from 'lucide-react';
 import { Database, FileText, Shield } from 'lucide-react';
-import SpotifyEpisodeDisplay from '../components/SpotifyEpisodeDisplay';
 
 interface HomePageProps {
   onNavigate: (page: 'episodes' | 'hosts' | 'mission' | 'ai-education' | 'resources', scrollToId?: string) => void;
@@ -117,10 +116,22 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   
                   {/* Episode Display - Mobile/Tablet */}
                   <div className="md:hidden mx-auto">
-                    <SpotifyEpisodeDisplay 
-                      episodeUrl="https://open.spotify.com/episode/6avJ9KVTcTknesf1FWc5Ok?si=8a140799fcb8470a"
-                      className="w-48 h-48"
-                    />
+                    <div className="w-48 h-48 bg-gradient-to-br from-[#f6c453]/20 to-[#f0a04b]/20 rounded-2xl border border-[#f6c453]/30 flex items-center justify-center relative overflow-hidden">
+                      <div className="absolute inset-0 cyber-scan"></div>
+                      <div className="relative z-10 w-40 h-40 overflow-hidden rounded-xl shadow-2xl border-2 border-[#f6c453]/50 bg-white">
+                        <img
+                          src="/Untitled (11) (1).png"
+                          alt="How We Got AI in Education All Wrong (And How to Do Better)"
+                          className="w-full h-full object-cover"
+                        />
+                        
+                        {/* Decorative elements overlay */}
+                        <div className="absolute top-2 left-2 w-3 h-3 bg-[#1DB954] rounded-full z-30 pointer-events-none"></div>
+                        <div className="absolute top-2 right-2 w-2 h-2 bg-[#f6c453] rounded-full animate-pulse z-20 pointer-events-none"></div>
+                        <div className="absolute bottom-2 left-2 w-1.5 h-1.5 bg-[#f0a04b] rounded-full animate-pulse delay-300 pointer-events-none"></div>
+                        <div className="absolute top-1/2 left-2 w-1 h-1 bg-[#fefbe9] rounded-full animate-pulse delay-700 pointer-events-none"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
@@ -212,10 +223,22 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   
                   {/* Episode Display - Medium screens sidebar and large screens */}
                   <div className="hidden md:flex md:col-span-1 lg:col-span-1 md:items-start lg:items-center md:justify-start lg:justify-center">
-                    <SpotifyEpisodeDisplay 
-                      episodeUrl="https://open.spotify.com/episode/6avJ9KVTcTknesf1FWc5Ok?si=8a140799fcb8470a"
-                      className="w-32 h-32 md:w-40 md:h-40 lg:w-64 lg:h-64"
-                    />
+                    <div className="w-32 h-32 md:w-40 md:h-40 lg:w-64 lg:h-64 bg-gradient-to-br from-[#f6c453]/20 to-[#f0a04b]/20 rounded-2xl border border-[#f6c453]/30 flex items-center justify-center relative overflow-hidden">
+                      <div className="absolute inset-0 cyber-scan"></div>
+                      <div className="relative z-10 w-full h-full overflow-hidden rounded-xl shadow-2xl border-2 border-[#f6c453]/50 bg-white">
+                        <img
+                          src="/Untitled (11) (1).png"
+                          alt="How We Got AI in Education All Wrong (And How to Do Better)"
+                          className="w-full h-full object-cover"
+                        />
+                        
+                        {/* Decorative elements overlay */}
+                        <div className="absolute top-2 left-2 md:top-3 md:left-3 w-3 h-3 md:w-4 md:h-4 bg-[#1DB954] rounded-full z-30 pointer-events-none"></div>
+                        <div className="absolute top-2 right-2 md:top-4 md:right-4 w-2 h-2 md:w-3 md:h-3 bg-[#f6c453] rounded-full animate-pulse z-20 pointer-events-none"></div>
+                        <div className="absolute bottom-2 left-2 md:bottom-4 md:left-4 w-1.5 h-1.5 md:w-2 md:h-2 bg-[#f0a04b] rounded-full animate-pulse delay-300 pointer-events-none"></div>
+                        <div className="absolute top-1/2 left-2 md:left-4 w-1 h-1 bg-[#fefbe9] rounded-full animate-pulse delay-700 pointer-events-none"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -561,4 +584,3 @@ export default function HomePage({ onNavigate }: HomePageProps) {
     </div>
   );
 }
-
