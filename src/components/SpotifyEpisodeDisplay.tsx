@@ -31,7 +31,7 @@ export default function SpotifyEpisodeDisplay({ episodeUrl, className = '', roun
         <div className="absolute inset-0 cyber-scan"></div>
         <div className={`relative z-10 w-40 h-40 sm:w-44 sm:h-44 md:w-40 md:h-40 lg:w-48 lg:h-48 overflow-hidden ${showBorder ? 'rounded-xl shadow-2xl border-2 border-[#f6c453]/50' : 'rounded-none'}`}>
           <img
-            src="/src/assets/Untitled (11) (1).png"
+            src="/Untitled (11) (1).png"
             alt="Episode 002: How we Got AI in Education All Wrong"
             className="w-full h-full object-cover"
           />
