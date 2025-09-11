@@ -46,7 +46,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <div className="relative">
                 <div className="w-12 h-12 rounded-lg overflow-hidden shadow-lg">
                   <img 
-                    src="/src/assets/Gemini_Generated_Image_xino18xino18xino (1).png" 
+                    src="/Gemini_Generated_Image_xino18xino18xino (1).png" 
                     alt="Brainwaves Decoded Logo" 
                     className="w-full h-full object-cover"
                   />
