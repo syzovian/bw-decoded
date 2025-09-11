@@ -27,7 +27,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               
               <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold text-[#fefbe9] mb-8 leading-tight">
                 <span className="block">BRAINWAVES:</span>
-                <span className="block text-[#f6c453] cyber-glow">DECODED</span>
+                <span className="block text-[#f6c453] cyber-glow">DECODEDE</span>
               </h1>
               
               <div className="max-w-3xl mx-auto mb-12">
