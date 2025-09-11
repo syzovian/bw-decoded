@@ -90,7 +90,7 @@ export default function AIEducationPage() {
                     {episode.id === 1 ? (
                       <div className="w-full h-full bg-white rounded-t-2xl">
                         <img
-                          src="/Screenshot 2025-09-11 at 03.28.12.png"
+                          src="/episode-1-art.png"
                           alt="AI in Education | Professor Ortiz"
                           className="w-full h-full object-cover rounded-t-2xl"
                         />
