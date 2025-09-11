@@ -21,15 +21,14 @@ export default function HostsPage() {
       name: "Elvis Waxwing",
       role: "Host & AI Enthusiast",
       callSign: "OPERATOR_01",
-      bio: "I am actively studying AI automation using tools like n8n, make.com, and Relevance AI and aspire to guide high-ticket local businesses on using AI for faster and more effective client acquisition and high-quality lead nurturing. I see the beginning of the AI era as the opportunity to create financial freedom that will allow me to pursue my bigger vision of colonizing the Solar System and facilitating the process of making humans a space-fairing civilization.",
-      bio: "I am actively studying AI automation using tools like n8n, make.com, and Relevance AI and aspire to guide high-ticket local businesses on using AI for faster and more effective client acquisition and high-quality lead nurturing. I see the beginning of the AI era as the opportunity to create financial freedom that will allow me to pursue my bigger vision of colonizing the Solar System and facilitating the process of making humans a spacefaring civilization.",
+      bio: "I am actively studying AI automation using tools like n8n, make.com, and Relevance AI and aspire to guide high-ticket local businesses in leveraging AI for faster and more effective client acquisition and high-quality lead nurturing. I view the beginning of the AI era as a unique opportunity to create financial freedom that will enable me to pursue my greater vision of faciltating the colonization of the Solar System and making humanity a spacefaring civilization.",
       expertise: ["Machine Learning", "AI Ethics", "AI Automation", "Prompt Engineering"],
       social: {
         x: "https://x.com/osyzov",
         linkedin: "https://www.linkedin.com/in/oleksandr-syzov/",
         email: "elvis@brainwaves-decoded.com"
       },
-      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      image: "src/assets/photo_2025-09-06 22.34.13.jpeg",
       status: "ONLINE"
     },
     {
@@ -43,7 +42,7 @@ export default function HostsPage() {
         github: "https://github.com/evan-ortiz",
         email: "evanortizlab@gmail.com"
       },
-      image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      image: "/src/assets/Tin Type Head Shot.jpg",
       status: "ONLINE"
     }
   ];
@@ -53,7 +52,7 @@ export default function HostsPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Terminal Header */}
         <div className="bg-[#0b4d59]/80 backdrop-blur-sm border border-[#f6c453]/30 rounded-2xl p-12 mb-16">
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0 mb-6">
             <div className="flex items-center space-x-4">
               <div className="flex space-x-2">
                 <div className="w-3 h-3 bg-[#f6c453] rounded-full animate-pulse"></div>
@@ -62,7 +61,7 @@ export default function HostsPage() {
               </div>
               <span className="text-[#f6c453] font-mono text-sm">OPERATOR_PROFILES.sys</span>
             </div>
-            <div className="text-[#e1eedd] font-mono text-xs">STATUS: ACTIVE</div>
+            <div className="hidden sm:block text-[#e1eedd] font-mono text-xs sm:text-right">STATUS: ACTIVE</div>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-[#fefbe9] mb-4">
@@ -88,11 +87,11 @@ export default function HostsPage() {
                   
                   {/* Profile Frame */}
                   <div className="relative">
-                    <div className="w-64 h-64 rounded-2xl overflow-hidden border-2 border-[#f6c453]/50 shadow-2xl">
+                    <div className="w-64 h-64 xl:w-[28rem] xl:h-[28rem] 2xl:w-[32rem] 2xl:h-[32rem] rounded-2xl overflow-hidden border-2 border-[#f6c453]/50 shadow-2xl">
                       <img
                         src={host.image}
                         alt={host.name}
-                        className="w-full h-full object-cover"
+                        className={`w-full h-full object-cover ${index === 0 ? 'object-center scale-150' : 'object-top'}`}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#285A5A]/30 to-transparent"></div>
                     </div>
@@ -196,7 +195,7 @@ export default function HostsPage() {
         </div>
 
         {/* Communication Terminal */}
-        <div className="mt-20 bg-[#0b4d59]/80 backdrop-blur-sm border border-[#f6c453]/30 rounded-2xl p-12">
+        <div className="mt-20 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-12 shadow-xl hover:bg-white/10 hover:border-white/20 transition-all duration-500">
           <div className="text-center space-y-6">
             <div className="flex items-center justify-center space-x-3 mb-6">
               <div className="w-2 h-2 bg-[#f6c453] rounded-full animate-pulse"></div>
@@ -211,14 +210,17 @@ export default function HostsPage() {
               Have questions about AI or suggestions for future episodes? Initialize communication protocol.
             </p>
             
-            <button className="group relative bg-gradient-to-r from-[#f6c453] to-[#f0a04b] text-[#0b4d59] px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 overflow-hidden">
+            <a
+              href="mailto:elvis@brainwaves-decoded.com"
+              className="group relative bg-gradient-to-r from-[#f6c453] to-[#f0a04b] text-[#0b4d59] px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 overflow-hidden inline-block"
+            >
               <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
               <div className="relative flex items-center space-x-3">
                 <Mail className="w-5 h-5" />
                 <span>INITIATE CONTACT</span>
                 <ExternalLink className="w-4 h-4" />
               </div>
-            </button>
+            </a>
           </div>
         </div>
       </div>

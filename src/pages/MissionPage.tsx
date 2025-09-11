@@ -124,7 +124,7 @@ export default function MissionPage() {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="group relative bg-[#0b4d59]/60 backdrop-blur-sm border border-[#f6c453]/20 rounded-2xl p-8 transition-all duration-500 hover:scale-105 hover:border-[#f6c453] overflow-hidden"
+                className="group relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 transition-all duration-500 hover:scale-105 hover:bg-white/10 hover:border-white/20 overflow-hidden shadow-xl"
               >
                 {/* Scanning line */}
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f6c453] to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
@@ -154,8 +154,7 @@ export default function MissionPage() {
         </div>
 
         {/* Activation Terminal */}
-        <div className="bg-[#0b4d59]/80 backdrop-blur-sm border border-[#f6c453]/30 rounded-2xl p-12 text-center relative overflow-hidden">
-          <div className="absolute inset-0 cyber-scan opacity-50"></div>
+        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-12 text-center relative overflow-hidden shadow-xl hover:bg-white/10 hover:border-white/20 transition-all duration-500">
           
           <div className="relative z-10 space-y-8">
             <div className="flex items-center justify-center space-x-3 mb-6">
@@ -182,15 +181,22 @@ export default function MissionPage() {
               >
                 <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                 <div className="relative flex items-center space-x-3">
-                  <span>SUBSCRIBE TO FEED</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <span className="text-center leading-tight">
+                    <span className="block sm:inline">SUBSCRIBE</span>
+                    <span className="block sm:inline sm:ml-2">TO FEED</span>
+                  </span>
                 </div>
               </a>
               
-              <button className="group relative border-2 border-[#f6c453]/50 text-[#f6c453] hover:border-[#f6c453] hover:bg-[#f6c453]/10 px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 overflow-hidden">
+              <a
+                href="https://discord.gg/3SuuXk4uxa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative border-2 border-[#f6c453]/50 text-[#f6c453] hover:border-[#f6c453] hover:bg-[#f6c453]/10 px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 overflow-hidden"
+              >
                 <div className="absolute inset-0 bg-[#f6c453]/5 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                 <div className="relative">JOIN NEURAL NETWORK</div>
-              </button>
+              </a>
             </div>
           </div>
         </div>

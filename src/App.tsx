@@ -5,16 +5,29 @@ import HomePage from './pages/HomePage';
 import EpisodesPage from './pages/EpisodesPage';
 import HostsPage from './pages/HostsPage';
 import MissionPage from './pages/MissionPage';
+import AIEducationPage from './pages/AIEducationPage';
+import ResourcesPage from './pages/ResourcesPage';
 import './styles/animations.css';
 
-type Page = 'home' | 'episodes' | 'hosts' | 'mission';
+type Page = 'home' | 'episodes' | 'hosts' | 'mission' | 'ai-education' | 'resources';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
 
-  const handleNavigation = (page: Page) => {
+  const handleNavigation = (page: Page, scrollToId?: string) => {
     setCurrentPage(page);
-    window.scrollTo(0, 0);
+    
+    if (scrollToId) {
+      // Wait for the page to render, then scroll to the element
+      setTimeout(() => {
+        const element = document.getElementById(scrollToId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
   };
 
   const renderPage = () => {
@@ -27,6 +40,10 @@ function App() {
         return <HostsPage />;
       case 'mission':
         return <MissionPage />;
+      case 'ai-education':
+        return <AIEducationPage />;
+      case 'resources':
+        return <ResourcesPage />;
       default:
         return <HomePage onNavigate={handleNavigation} />;
     }
@@ -47,7 +64,7 @@ function App() {
         {renderPage()}
       </main>
       
-      <Footer />
+      <Footer onNavigate={handleNavigation} />
     </div>
   );
 }

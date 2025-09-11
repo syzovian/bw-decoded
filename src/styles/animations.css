@@ -3,8 +3,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 200%;
+  height: 200%;
   background-image: 
     linear-gradient(rgba(246, 196, 83, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(246, 196, 83, 0.1) 1px, transparent 1px);
@@ -93,8 +93,8 @@
 
 /* Keyframe Animations */
 @keyframes gridFlow {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(50px, 50px); }
+  0% { transform: translate(-50px, -50px); }
+  100% { transform: translate(0, 0); }
 }
 
 @keyframes particleFloat {
@@ -164,6 +164,20 @@
 
 .animate-spin-slow-reverse {
   animation: spin-slow-reverse 25s linear infinite;
+}
+
+/* Heartbeat Animation */
+@keyframes heartbeat {
+  0%, 100% { 
+    transform: scale(1);
+  }
+  50% { 
+    transform: scale(1.01);
+  }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 3s ease-in-out infinite;
 }
 
 /* Line Clamp Utilities */
@@ -260,4 +274,24 @@
 
 .matrix-rain {
   animation: matrixRain 4s linear infinite;
+}
+
+/* Featured Episode Artwork - Make the inner Spotify image larger */
+.featured-episode-artwork .relative.z-10 {
+  width: 80% !important;
+  height: 80% !important;
+}
+
+@media (min-width: 1024px) {
+  .featured-episode-artwork .relative.z-10 {
+    width: 85% !important;
+    height: 85% !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .featured-episode-artwork .relative.z-10 {
+    width: 90% !important;
+    height: 90% !important;
+  }
 }

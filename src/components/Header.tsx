@@ -1,11 +1,11 @@
 import React from 'react';
 import { Radio, Menu, X, Zap } from 'lucide-react';
 
-type Page = 'home' | 'episodes' | 'hosts' | 'mission';
+type Page = 'home' | 'episodes' | 'hosts' | 'mission' | 'ai-education' | 'resources';
 
 interface HeaderProps {
   currentPage: Page;
-  onNavigate: (page: Page) => void;
+  onNavigate: (page: 'home' | 'episodes' | 'hosts' | 'mission' | 'ai-education' | 'resources', scrollToId?: string) => void;
 }
 
 export default function Header({ currentPage, onNavigate }: HeaderProps) {
@@ -16,6 +16,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
     { id: 'episodes' as Page, label: 'Episodes' },
     { id: 'hosts' as Page, label: 'Hosts' },
     { id: 'mission' as Page, label: 'Mission' },
+    { id: 'resources' as Page, label: 'Resources' },
   ];
 
   return (
