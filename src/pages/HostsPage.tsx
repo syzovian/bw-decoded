@@ -28,7 +28,7 @@ export default function HostsPage() {
         linkedin: "https://www.linkedin.com/in/oleksandr-syzov/",
         email: "elvis@brainwaves-decoded.com"
       },
-      image: "src/assets/photo_2025-09-06 22.34.13.jpeg",
+      image: "/photo_2025-09-06 22.34.13.jpeg",
       status: "ONLINE"
     },
     {
@@ -42,7 +42,7 @@ export default function HostsPage() {
         github: "https://github.com/evan-ortiz",
         email: "evanortizlab@gmail.com"
       },
-      image: "/src/assets/Tin Type Head Shot.jpg",
+      image: "/Tin Type Head Shot.jpg",
       status: "ONLINE"
     }
   ];
