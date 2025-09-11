@@ -1,6 +1,5 @@
 import React from 'react';
 import { Play, Clock, Calendar, ChevronRight, ExternalLink, Brain, GraduationCap, MoreHorizontal, X } from 'lucide-react';
-import SpotifyEpisodeDisplay from '../components/SpotifyEpisodeDisplay';
 
 export default function AIEducationPage() {
   const [expandedEpisode, setExpandedEpisode] = React.useState<number | null>(null);
@@ -88,14 +87,35 @@ export default function AIEducationPage() {
                   {/* Episode Display */}
                   <div className="aspect-video bg-gradient-to-br from-[#f6c453]/10 to-[#f0a04b]/10 relative overflow-hidden rounded-t-2xl rounded-b-none">
                     <div className="absolute inset-0 cyber-scan opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-                    <div className="absolute inset-0 w-full h-full">
-                      <SpotifyEpisodeDisplay 
-                        episodeUrl={episode.id === 2 ? "https://open.spotify.com/episode/6avJ9KVTcTknesf1FWc5Ok?si=8a140799fcb8470a" : "https://open.spotify.com/episode/57gSexp1QP0yt4zpi0CYAH?si=iIBEFrhOTDO49b95L3pMXg"}
-                        className="w-full h-full"
-                        rounded={false}
-                        showBorder={false}
-                      />
-                    </div>
+                    {episode.id === 1 ? (
+                      <div className="w-full h-full bg-white rounded-t-2xl">
+                        <img
+                          src="/Screenshot 2025-09-11 at 03.28.12.png"
+                          alt="AI in Education | Professor Ortiz"
+                          className="w-full h-full object-cover rounded-t-2xl"
+                        />
+                        
+                        {/* Decorative elements overlay */}
+                        <div className="absolute top-2 left-2 md:top-3 md:left-3 w-3 h-3 md:w-4 md:h-4 bg-[#1DB954] rounded-full z-30 pointer-events-none"></div>
+                        <div className="absolute top-2 right-2 md:top-4 md:right-4 w-2 h-2 md:w-3 md:h-3 bg-[#f6c453] rounded-full animate-pulse z-20 pointer-events-none"></div>
+                        <div className="absolute bottom-2 left-2 md:bottom-4 md:left-4 w-1.5 h-1.5 md:w-2 md:h-2 bg-[#f0a04b] rounded-full animate-pulse delay-300 pointer-events-none"></div>
+                        <div className="absolute top-1/2 left-2 md:left-4 w-1 h-1 bg-[#fefbe9] rounded-full animate-pulse delay-700 pointer-events-none"></div>
+                      </div>
+                    ) : (
+                      <div className="w-full h-full bg-white rounded-t-2xl">
+                        <img
+                          src="/Untitled (11) (1).png"
+                          alt="How We Got AI in Education All Wrong (And How to Do Better)"
+                          className="w-full h-full object-cover rounded-t-2xl"
+                        />
+                        
+                        {/* Decorative elements overlay */}
+                        <div className="absolute top-2 left-2 md:top-3 md:left-3 w-3 h-3 md:w-4 md:h-4 bg-[#1DB954] rounded-full z-30 pointer-events-none"></div>
+                        <div className="absolute top-2 right-2 md:top-4 md:right-4 w-2 h-2 md:w-3 md:h-3 bg-[#f6c453] rounded-full animate-pulse z-20 pointer-events-none"></div>
+                        <div className="absolute bottom-2 left-2 md:bottom-4 md:left-4 w-1.5 h-1.5 md:w-2 md:h-2 bg-[#f0a04b] rounded-full animate-pulse delay-300 pointer-events-none"></div>
+                        <div className="absolute top-1/2 left-2 md:left-4 w-1 h-1 bg-[#fefbe9] rounded-full animate-pulse delay-700 pointer-events-none"></div>
+                      </div>
+                    )}
                     
                     {/* Status indicator */}
                     <div className="absolute top-4 right-4 px-2 py-1 bg-[#0b4d59]/80 border border-[#f6c453]/50 rounded text-xs font-mono text-[#f6c453] z-20">
