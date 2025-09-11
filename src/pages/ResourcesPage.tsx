@@ -109,7 +109,7 @@ export default function ResourcesPage() {
                 <div className="aspect-video bg-gradient-to-br from-[#f6c453]/10 to-[#f0a04b]/10 flex items-center justify-center relative">
                   <div className="absolute inset-0 cyber-scan opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <img 
-                    src={`/src/assets/${
+                    src={`/${
                       resource.id === 2 ? 'photo_1.png' : 
                       resource.id === 3 ? 'photo_2.png' : 
                       'photo_3.png'
