@@ -272,7 +272,7 @@ export default function EpisodesPage() {
                 <div className="aspect-video bg-gradient-to-br from-[#f6c453]/10 to-[#f0a04b]/10 relative overflow-hidden rounded-t-2xl rounded-b-none">
                   <div className="absolute inset-0 cyber-scan opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                   <img
-                    src="/Untitled (11) (1).png"
+                    src="/Screenshot 2025-09-11 at 03.28.12.png"
                     alt="AI in Education | Professor Ortiz"
                     className="w-full h-full object-cover rounded-t-2xl"
                   />
