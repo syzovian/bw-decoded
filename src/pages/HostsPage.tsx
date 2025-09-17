@@ -18,7 +18,7 @@ const GitHubIcon = ({ className }: { className?: string }) => (
 export default function HostsPage() {
   const hosts = [
     {
-      name: "Elvis Waxwing",
+      name: "Caesar Waxwing",
       role: "Host & AI Enthusiast",
       callSign: "OPERATOR_01",
       bio: "I am actively studying AI automation using tools like n8n, make.com, and Relevance AI and aspire to guide high-ticket local businesses in leveraging AI for faster and more effective client acquisition and high-quality lead nurturing. I view the beginning of the AI era as a unique opportunity to create financial freedom that will enable me to pursue my greater vision of faciltating the colonization of the Solar System and making humanity a spacefaring civilization.",
